@@ -12,34 +12,23 @@ class ViewController: UIViewController {
 
     @IBOutlet var theLabel: UILabel!
     
-    var tapCount = 0
+    @IBOutlet var text1: UITextField!
     
-    @IBAction func buttonTapped(_ sender: Any) {
+    @IBOutlet var text2: UITextField!
+    
+    
+    
+    @IBAction func buttonTapped(_ sender: Any){
+       
+        print(text1.text!)
+        print(text2.text!)
         
-        tapCount = tapCount + 1
         
-        if tapCount >= 10 {
-            
-            theLabel.text = "tapped 10 times"
-            
         }
-        
-        
-        
-        
-        // print("button tapped")
-        
-    }
+    
     
     
 
-    @IBAction func buttTappedToo(_ sender: Any) {
-        
-        theLabel.text = "GoodBye!"
-        
-    }
-
-    
     
     
     override func viewDidLoad() {

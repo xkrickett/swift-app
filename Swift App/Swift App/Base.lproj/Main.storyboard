@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,24 +35,41 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j2l-NO-0tA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCt-Xz-aFo">
-                                <rect key="frame" x="136" y="366" width="102" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="PUSH ME TOO"/>
-                                <connections>
-                                    <action selector="buttTappedToo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4i9-Yk-Hqg"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Njr-AK-AGo">
+                                <rect key="frame" x="141" y="276" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="CPR-i2-Td4"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IUD-MD-yu8">
+                                <rect key="frame" x="177" y="354" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="nm1-WR-kfl"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Njr-AK-AGo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1ZR-5M-Oz4"/>
                             <constraint firstItem="5bK-XJ-7yj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="113" id="8zR-OK-UU4"/>
                             <constraint firstItem="8KL-wH-d6b" firstAttribute="top" secondItem="5bK-XJ-7yj" secondAttribute="bottom" constant="58" id="B3v-KL-Dva"/>
+                            <constraint firstItem="IUD-MD-yu8" firstAttribute="top" secondItem="Njr-AK-AGo" secondAttribute="bottom" constant="48" id="L22-4D-UBA"/>
+                            <constraint firstItem="IUD-MD-yu8" firstAttribute="top" secondItem="Njr-AK-AGo" secondAttribute="bottom" constant="48" id="WkH-UO-Oq9"/>
+                            <constraint firstItem="IUD-MD-yu8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m4U-dU-FIm"/>
                             <constraint firstItem="8KL-wH-d6b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ppf-0Q-xKT"/>
                             <constraint firstItem="5bK-XJ-7yj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q66-bG-KWy"/>
+                            <constraint firstItem="Njr-AK-AGo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="276" id="yl9-Sl-QhK"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="text1" destination="Njr-AK-AGo" id="bYb-VZ-Yr3"/>
+                        <outlet property="text2" destination="IUD-MD-yu8" id="jDC-dj-Jea"/>
                         <outlet property="theLabel" destination="5bK-XJ-7yj" id="Nok-6e-XsU"/>
                     </connections>
                 </viewController>
